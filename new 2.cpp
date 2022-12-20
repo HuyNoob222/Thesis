@@ -36,102 +36,64 @@ BlynkTimer timer;
 
 BLYNK_WRITE(V1) //GPIO1
 {
-  // Set incoming value from pin V0 to a variable
-  int value = param.asInt();
-  
   // Update state
-  digitalWrite(2, value);
+  digitalWrite(2,param.asInt());
 }
 BLYNK_WRITE(V2) //GPIO2
 {
-  // Set incoming value from pin V0 to a variable
-  int value = param.asInt();
-  
   // Update state
-  digitalWrite(3, value);
+  digitalWrite(3, param.asInt());
 }
 BLYNK_WRITE(V3) //GPIO3
 {
-  // Set incoming value from pin V0 to a variable
-  int value = param.asInt();
-  
   // Update state
-  digitalWrite(4, value);
+  digitalWrite(4, param.asInt());
 }
 BLYNK_WRITE(V4) //GPIO4
 {
-  // Set incoming value from pin V0 to a variable
-  int value = param.asInt();
-  
   // Update state
-  digitalWrite(5, value);
+  digitalWrite(5, param.asInt());
 }
 BLYNK_WRITE(V5) //GPIO5
 {
-  // Set incoming value from pin V0 to a variable
-  int value = param.asInt();
-  
   // Update state
-  digitalWrite(6, value);
+  digitalWrite(6, param.asInt());
 }
 BLYNK_WRITE(V6) //GPIO6
 {
-  // Set incoming value from pin V0 to a variable
-  int value = param.asInt();
-  
   // Update state
-  digitalWrite(7, value);
+  digitalWrite(7, param.asInt());
 }
 BLYNK_WRITE(V7) //GPIO7
 {
-  // Set incoming value from pin V0 to a variable
-  int value = param.asInt();
-  
   // Update state
-  digitalWrite(8, value);
+  digitalWrite(8, param.asInt());
 }
 BLYNK_WRITE(V8) //GPIO8
 {
-  // Set incoming value from pin V0 to a variable
-  int value = param.asInt();
-  
   // Update state
-  digitalWrite(9, value);
+  digitalWrite(9, param.asInt());
 }
 BLYNK_WRITE(V9) //GPIO9
 {
-  // Set incoming value from pin V0 to a variable
-  int value = param.asInt();
-  
   // Update state
-  digitalWrite(27, value);
+  digitalWrite(27, param.asInt());
 }
 BLYNK_WRITE(V10) //GPIO10
 {
-  // Set incoming value from pin V0 to a variable
-  int value = param.asInt();
-  
   // Update state
-  digitalWrite(26, value);
+  digitalWrite(26, param.asInt());
 }
 BLYNK_WRITE(V11) //GPIO11
 {
-  // Set incoming value from pin V0 to a variable
-  int value = param.asInt();
-  
   // Update state
-  digitalWrite(29, value);
+  digitalWrite(29, param.asInt());
 }
 BLYNK_WRITE(V12) //GPIO12
-{
-  // Set incoming value from pin V0 to a variable
-  int value = param.asInt();
-  
+{ 
   // Update state
-  digitalWrite(30, value);
+  digitalWrite(30, param.asInt());
 }
-// This function is called every time the device is connected to the Blynk.Cloud
-BLYNK_CONNECTED()
 
 // This function sends Arduino's uptime every second to Virtual Pin 2.
 void myTimerEvent()
