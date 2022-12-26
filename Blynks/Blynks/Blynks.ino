@@ -29,63 +29,80 @@ BlynkTimer timer;
 BLYNK_WRITE(V1) //GPIO1
 {
   // Update state
+  pinMode(2,OUTPUT);
   digitalWrite(2,param.asInt());
+  Serial.print("GPIO 1: ");
   Serial.println(param.asInt());
 }
 BLYNK_WRITE(V2) //GPIO2
 {
   // Update state
   digitalWrite(3, param.asInt());
+    Serial.print("GPIO 2: ");
+  Serial.println(param.asInt());
 }
 BLYNK_WRITE(V3) //GPIO3
 {
   // Update state
   digitalWrite(4, param.asInt());
+    Serial.print("GPIO 3: ");
+  Serial.println(param.asInt());
 }
 BLYNK_WRITE(V4) //GPIO4
 {
   // Update state
   digitalWrite(5, param.asInt());
+    Serial.print("GPIO 4: ");
+  Serial.println(param.asInt());
 }
 BLYNK_WRITE(V5) //GPIO5
 {
   // Update state
   digitalWrite(6, param.asInt());
+  Serial.println(param.asInt());
 }
 BLYNK_WRITE(V6) //GPIO6
 {
   // Update state
   digitalWrite(7, param.asInt());
+  Serial.println(param.asInt());
 }
 BLYNK_WRITE(V7) //GPIO7
 {
   // Update state
   digitalWrite(8, param.asInt());
+  Serial.println(param.asInt());
 }
 BLYNK_WRITE(V8) //GPIO8
 {
   // Update state
   digitalWrite(9, param.asInt());
+  Serial.println(param.asInt());
 }
 BLYNK_WRITE(V9) //GPIO9
 {
   // Update state
   digitalWrite(27, param.asInt());
+  Serial.print("GPIO 9: ");
+  Serial.println(param.asInt());
 }
 BLYNK_WRITE(V10) //GPIO10
 {
   // Update state
   digitalWrite(26, param.asInt());
+  Serial.println(param.asInt());
 }
 BLYNK_WRITE(V11) //GPIO11
 {
   // Update state
   digitalWrite(29, param.asInt());
+  Serial.println(param.asInt());
 }
 BLYNK_WRITE(V12) //GPIO12
 { 
   // Update state
   digitalWrite(30, param.asInt());
+  Serial.println(param.asInt());
 }
 
 // This function sends Arduino's uptime every second to Virtual Pin 2.
@@ -100,7 +117,6 @@ void setup()
 {
   // Debug console
   Serial.begin(115200);
-
   Blynk.begin(auth, ssid, pass);
   // You can also specify server:
   //Blynk.begin(auth, ssid, pass, "blynk.cloud", 80);
