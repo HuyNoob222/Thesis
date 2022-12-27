@@ -29,9 +29,11 @@ BlynkTimer timer;
 BLYNK_WRITE(V1) //GPIO1
 {
   // Update state
-  pinMode(2,OUTPUT);
   digitalWrite(2,param.asInt());
   Serial.print("GPIO 1: ");
+  /*
+  int temp = 
+  */
   Serial.println(param.asInt());
 }
 BLYNK_WRITE(V2) //GPIO2
@@ -117,6 +119,18 @@ void setup()
 {
   // Debug console
   Serial.begin(115200);
+  pinMode(2,OUTPUT);
+  pinMode(3,OUTPUT);
+  pinMode(4,OUTPUT);
+  pinMode(5,OUTPUT);
+  pinMode(6,OUTPUT);
+  pinMode(7,OUTPUT);
+  pinMode(8,OUTPUT);
+  pinMode(9,OUTPUT);
+  pinMode(26,OUTPUT);
+  pinMode(27,OUTPUT);
+  pinMode(29,OUTPUT);
+  pinMode(30,OUTPUT);
   Blynk.begin(auth, ssid, pass);
   // You can also specify server:
   //Blynk.begin(auth, ssid, pass, "blynk.cloud", 80);
