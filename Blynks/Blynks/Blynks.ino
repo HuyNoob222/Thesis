@@ -84,20 +84,20 @@ BLYNK_WRITE(V8) //GPIO8
 BLYNK_WRITE(V9) //GPIO9
 {
   // Update state
-  digitalWrite(27, param.asInt());
+  digitalWrite(13, param.asInt());
   Serial.print("GPIO 9: ");
   Serial.println(param.asInt());
 }
 BLYNK_WRITE(V10) //GPIO10
 {
   // Update state
-  digitalWrite(26, param.asInt());
+  digitalWrite(20, param.asInt());
   Serial.println(param.asInt());
 }
 BLYNK_WRITE(V11) //GPIO11
 {
   // Update state
-  digitalWrite(29, param.asInt());
+  digitalWrite(21, param.asInt());
   Serial.println(param.asInt());
 }
 BLYNK_WRITE(V12) //GPIO12
@@ -127,9 +127,9 @@ void setup()
   pinMode(7,OUTPUT);
   pinMode(8,OUTPUT);
   pinMode(9,OUTPUT);
-  pinMode(26,OUTPUT);
-  pinMode(27,OUTPUT);
-  pinMode(29,OUTPUT);
+  pinMode(13,OUTPUT);
+  pinMode(20,OUTPUT);
+  pinMode(21,OUTPUT);
   pinMode(30,OUTPUT);
   Blynk.begin(auth, ssid, pass);
   // You can also specify server:
